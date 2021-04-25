@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "eb62209d-2ed9-4dd2-9366-a1bede5e78fe",
+		"name": "CaseStudy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/airport",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"airportName\":\"Sabiha Gökçen Havalimanı\",\r\n    \"airportShortCode\":\"SAW\",\r\n    \"latitude\" : \"332,23232323\",\r\n    \"longitude\":\"33562,23232323\",\r\n    \"country\": \"Türkiye\",\r\n    \"city\": \"İstanbul\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/airport",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/airline",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyName\": \"Pegasus\",\r\n    \"companyShortCode\":\"PGS\",\r\n    \"email\":\"info@pegasus.com\",\r\n    \"webSiteUrl\":\"www.pegasus.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/airline",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airline"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departureAirportId\": 1,\r\n    \"arrivalAirportId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/route",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"route"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/flight",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departureDate\":\"2001-07-04T12:08:56\",\r\n    \"arrivalDate\":\"2001-07-04T13:09:56\",\r\n    \"totalSeat\":90,\r\n    \"price\": 250.00,\r\n    \"airlineId\":1,\r\n    \"routeId\":1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/flight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"flightId\": 1,\r\n    \"name\": \"Alican\",\r\n    \"surname\": \"Öztürk\",\r\n    \"identityNumber\":\"65897415697\",\r\n    \"email\":\"alican@testmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ticket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ticketId\": 1,\r\n    \"cardNumber\": \"1234,4231.1234-4321\",\r\n    \"cvc\":\"123\",\r\n    \"expYear\" : 21,\r\n    \"expMonth\": 12\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/airport?name=Sab",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/airport?name=Sab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airport"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Sab"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/airline?name=Peg",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/airline?name=Peg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airline"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Peg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/flight?from=Sabiha Gökçen Havalimanı&to=Sabiha Gökçen Havalimanı2&departureDate=2001-07-04T12:08:56",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/flight?from=Sabiha Gökçen Havalimanı&to=Sabiha Gökçen Havalimanı2&departureDate=2001-07-04T12:08:56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flight"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "Sabiha Gökçen Havalimanı"
+						},
+						{
+							"key": "to",
+							"value": "Sabiha Gökçen Havalimanı2"
+						},
+						{
+							"key": "departureDate",
+							"value": "2001-07-04T12:08:56"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/ticket?ticketNumber=1484cbd1-6eb8-4eca-9d32-0abd37968b80",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/ticket/024fb781-72bb-4d5d-b1b6-a492c94c39d2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						"024fb781-72bb-4d5d-b1b6-a492c94c39d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/ticket",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ticketId\":1\r\n   \r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/ticket/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
