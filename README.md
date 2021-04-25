@@ -8,9 +8,8 @@ Havaalanı oluşturmadan rota oluşturulamaz, rota ve havayolu şirketi oluştur
 
 Eksiklikler 
 
-Zaman kısıtından dolayı bazı özellikler eksik. Eksik özellikler aşağıdaki gibidir.
+Zaman kısıtından dolayı bazı özellikleri tam yetiştiremedim. Eksik özellikler aşağıdaki gibidir.
 
 1) Çoklu bilet satışı yok
 2) Gidiş dönüş bilet satışı yok
-3) Aktarmalı bilet satışı yok
-4) Arama işlemlerinde sayfalama yok
+3) Arama işlemlerinde sayfalama yok
