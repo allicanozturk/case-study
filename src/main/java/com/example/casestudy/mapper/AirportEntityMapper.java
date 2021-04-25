@@ -12,6 +12,7 @@ public interface AirportEntityMapper {
 
   AirportEntityMapper INSTANCE = Mappers.getMapper(AirportEntityMapper.class);
 
+  @Mapping(target = "airportName", expression = "java(source.getAirportName().toUpperCase())")
   AirportEntity toAirportEntity(AirportCreationRequest source);
 
   Airport toAirportResponse(AirportEntity source);

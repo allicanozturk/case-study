@@ -37,7 +37,7 @@ public class AirportServiceImpl implements IAirportService {
   @Override
   @Transactional(readOnly = true)
   public List<Airport> fetch(String searchKeyWord) {
-    List<AirportEntity> airports = airPortRepository.findAllByAirportNameLike("%" + searchKeyWord + "%");
+    List<AirportEntity> airports = airPortRepository.findAllByAirportNameLike("%" + searchKeyWord.toUpperCase() + "%");
     if (CollectionUtils.isEmpty(airports)) {
       return new ArrayList<>();
     }

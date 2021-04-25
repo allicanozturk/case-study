@@ -4,6 +4,7 @@ import com.example.casestudy.dto.request.AirlineCreationRequest;
 import com.example.casestudy.dto.model.Airline;
 import com.example.casestudy.entity.AirlineEntity;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public interface AirLinetEntityMapper {
 
   AirLinetEntityMapper INSTANCE = Mappers.getMapper(AirLinetEntityMapper.class);
 
+  @Mapping(target = "companyName", expression = "java(source.getCompanyName().toUpperCase())")
   AirlineEntity toAirLineEntity(AirlineCreationRequest source);
 
   Airline toAirLineResponse(AirlineEntity source);

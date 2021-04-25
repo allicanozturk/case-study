@@ -38,7 +38,7 @@ public class AirlineServiceImpl implements IAirlineService {
   @Override
   @Transactional(readOnly = true)
   public List<Airline> fetch(String searchKeyWord) {
-    List<AirlineEntity> airlineEntities = airlineRepository.findAllByCompanyNameLike("%" + searchKeyWord + "%");
+    List<AirlineEntity> airlineEntities = airlineRepository.findAllByCompanyNameLike("%" + searchKeyWord.toUpperCase() + "%");
     if (CollectionUtils.isEmpty(airlineEntities)) {
       return new ArrayList<>();
     }

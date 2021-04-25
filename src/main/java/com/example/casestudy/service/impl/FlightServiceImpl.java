@@ -50,7 +50,7 @@ public class FlightServiceImpl implements IFlightService {
   @Transactional(readOnly = true)
   public List<Flight> fetch(String from, String to, String departureDate) {
     Date convertedDate = DateUtil.convertToDate(departureDate, DateUtil.BASIC_FORMAT);
-    List<FlightEntity> flightEntities = flightRepository.findFlightsByDateAndFromAndTo(convertedDate, from, to);
+    List<FlightEntity> flightEntities = flightRepository.findFlightsByDateAndFromAndTo(convertedDate, from.toUpperCase(), to.toUpperCase());
     if (CollectionUtils.isEmpty(flightEntities)) {
       return new ArrayList<>();
     }
