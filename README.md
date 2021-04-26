@@ -8,9 +8,7 @@ Havaalanı yada Havayolu şirketi eklerken aynı kısa koda ait iki tane kayıt 
 
 
 
-Eksiklikler 
-
-Zaman kısıtından dolayı bazı özellikleri tam yetiştiremedim. Eksik özellikler aşağıdaki gibidir.
+Eksikler 
 
 1) Çoklu bilet satışı yok
 2) Gidiş dönüş bilet satışı yok
